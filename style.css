@@ -1,0 +1,265 @@
+body {
+    background-color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -111px;
+}
+
+.hello_name {
+    background-color:white;
+    width: 50%;
+    height: 80%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 0.20rem;
+    border-radius: 20px;
+}
+
+.nav {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 0.25rem;
+
+    
+}
+.textJava {
+    background-color: white;
+    height: 50%;
+    width: 80%;
+    text-align: start;
+    margin: 35px;
+    padding: 35px;
+    border-style: double;
+    border-width: 0.5rem;
+}
+
+.nav .button {
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    font-size: 16px;
+  
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.content {
+    background-color: white;
+    width: 50%;
+text-align: center;
+   
+    border-radius: 15px;
+   
+    position: absolute;
+    margin-top: 1350px;
+    border-style: solid;
+    border-width: 0.25rem;
+}
+
+
+.content h4 {
+    text-align: center;
+}
+
+.input {
+    width: 20px;
+}
+
+.quiz-frame {
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.quiz__head {
+    font-size: 20pt;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+.head__content {
+    padding: 2px;
+}
+
+.quiz__body {
+    margin: 10px;
+}
+
+.quiz__footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+.footer__content {
+    padding: 5px;
+}
+
+.quiz__body .button {
+    border: 0;
+    background-color: rgb(139, 136, 136);
+    width: 70%;
+    font-size: 15pt;
+    display: block;
+    margin: 2px auto;
+    cursor: pointer;
+}
+
+.button_wrong {
+    background: #EB6465;
+}
+.buttons__content{
+    padding-bottom: 12px;
+}
+
+.button_correct {
+    background: #5EB97D;
+}
+
+.button_passive {
+    background: #B3B3B3;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.top-left {
+    font-family: Impact, sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    color:black;
+    top: 100px;
+    left: 100px;
+}
+.top-right {
+    font-family: Impact, sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    color:black;
+    top: 100px;
+    right: 100px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.current {
+	background: #534827;
+	text-align: center;
+	background: rgb(226, 180, 28)
+}
+.container{
+	width:100%;
+	height:100%;
+	display:table;
+}
+.t-c{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+.calendar {
+	display:inline-block;
+	width: 300px;
+	margin:auto;
+	background: #79642b;
+	box-shadow: 0 5px 25px rgba(16, 16, 16, 0.5);
+	color: #fff;
+}
+.date {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 40px;
+}
+.month {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+}
+.day {
+	height: 30px;
+	width: 100%;
+	font-size: 15px;
+	line-height: 30px;
+}
+.year {
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	font-size: 30px;
+}
+.date-small {
+	list-style-type: none;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	display:inline-block;
+	border-radius: 50%;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+.date-small:hover {
+	background: #e0b70d;
+}
+.datelist {
+/* 	height: 190px; */
+	float:left;
+	width:100%;
+	height:100%;
+	background: #8d6666cc;
+	box-shadow: 0 -25px 25px -25px rgba(16, 16, 16, 0.5);
+}
+.today {
+	background: rgb(197, 93, 45);
+	color: #000;
+}
+.today:hover {
+	background: #e0b70d;
+	transition:0.3s;
+}
+.day-full {
+	background: #d3b633;
+	z-index: 3;
+	width: 100%;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	cursor: default;
+}

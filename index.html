@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"  >
+
+    <title>myWeb</title>
+</head>
+
+<body>
+    <header>
+        <div class="hello_name">
+            <form>
+                <p>
+                    <label>Введите имя</label>
+                    <input type="text" id="name">
+                    <input type="button" value="Отправить" onclick="sendForm()">
+                </p>
+            </form>
+            <p id="hello_name"></p>
+            
+        </div>
+    </header>
+    <main>
+        
+        <div class="textJava">
+            <h2>О языке JavaScript</h2>
+            <h3>
+                В мире frontend-разработки все строится на трех китах: HTML, CSS, Javascript.<br>HTML отвечает за каркас страницы, CSS – за стилизацию страницы, Javascript – за создание интерактива на странице.<br>
+                Что можно создать при помощи Javascript:  <br>
+                <ul>
+                    <li>динамический контент</li>
+                    <li>анимацию 2D/3D графики</li>
+                    <li>веб-приложения</li>
+                    <li>игры</li>
+                    <li>управление мультимедией и много другое</li>
+                </ul>
+            И это далеко не полный список. Самый типичный пример работы Javascript – это слайдер на странице.</h3>
+             <h2>Преимущества JavaScript:</h2>
+             <h3>
+             <ol>
+                 <li>Интерпретируемый язык. Код работает сразу же в браузере, 
+                    не требуется каких-либо затрат для его компиляции. 
+                    Это, несомненно, плюс: не нужно ничего ждать, 
+                    результат кода можно сразу же увидеть в браузере.</li>
+                 <li>Востребованный язык программирования. Если верить статистике, Javascript входит в топ-3 языков программирования в мире.</li>
+                 <li>Простота и рациональность применения. Несложные задачи можно решать быстро, порой достаточно 5 минут. <br>Для непростых в интернете полно вариантов решения, остается лишь выбрать подходящий и использовать его.</li>
+                 <li>Легкость в освоении. Сначала код, возможно, покажется очень трудным, однако это ощущение быстро пройдет.<br> Кроме того, сильно мотивирует визуальное отображение действий.</li>            
+             </ol></br>
+             </h3>
+             <h2>Недостатки JavaScript:</h2>
+             <h3>
+                <ol>
+                    <li>Отсутствие чтения и загрузки файлов. Это сделано из соображения безопасности для пользователей.</li>
+                    <li>Доступен для злоумышленников. Весьма легко встроить какой-либо вредоносный код, который может нанести большой урон.</li>
+                    <li>Динамическая типизация. Причина частых проблем при разработке – нет возможности выявить ошибки заранее, только на этапе работы.<br> Еще Javascript игнорирует явные несостыковки, которые прямо-таки бросаются в глаза.<br> Поэтому это настоящая боль для человека, который захотел изучить Javascript после освоения строго типизированного языка (Java, C, C++).</li>
+                </ol></br>
+                </h3>
+     
+    </div>
+        <div class="nav" id="nav">
+            <ul>
+                <li><input type="button" class="button" value="Площадь круга" onclick="showCircle()"></li>
+                <li><input type="button" class="button" value="Строки" onclick="showString()"></li>
+                <li><input type="button" class="button" value="Массив" onclick="showMass()"></li>
+                <li><input type="button" class="button" value="Таймер" onclick="showTimer()"></li>       
+                <li><input type="button" class="button" value="Калькулятор" onclick="showСalculator()"></li>
+                <li><input type="button" class="button" value="Тест" onclick="showTest()"></li>
+                <li><input type="button" class="button" value="Календарь" onclick="showСalendar()"></li>
+            </ul>
+        </div>
+        <div class="content" style="visibility: hidden;" id="Circle">
+            <h4>Площадь круга</h4>
+            <form name="form">
+               Радиус <input type="text" size="8" maxlength="8" name="R">
+                <input type="button" value="Вычислить" onClick="areaOfTheCircle(form);">
+                <input type="reset" value="Отменить"> Результат <input type="text" size="8" maxlength="8" name="res">
+            </form>
+            <p id="answer"></p>
+        </div>
+        <div class="content" style="visibility: hidden;" id="String">
+     
+            <h4>Канкетация строк</h4>
+            <form>
+                <p>Строка 1
+                    <Input type="text" id="string1"></Input>
+                </p>
+                <p>Строка 2
+                    <Input type="text" id="string2"></Input>
+                </p>
+                <p>
+                    <input type="button" value="Сравнить" onclick="compareString()">
+                </p>
+            </form>
+            <p id="cancet"></p>
+        </div>
+
+        <div class="content" style="visibility: hidden;" id="Mass">
+            <h4>Максимальное и минимальное значение в массиве из 5 элементов</h4>
+            <form id="formid">
+                <p>Введите массив
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                </p>
+            </form>
+            <input type="button" value="Отправить" onclick="calculateMass()">
+            <p id="ans2a"></p>
+            <p id="ans2b"></p>
+        </div>
+        <div class="wrapper" style="visibility: hidden;" id="Timer">
+            <h2>Таймер</h2>
+            <p>
+            <span id="seconds">00</span><span class="dots">:</span><span id="tens">00</span>
+            </p>
+            <button id="button-start">Старт</button>
+            <button id="button-stop">Стоп</button>
+            <button id="button-reset">Обнулить</button>
+
+        </div>
+    <div class="content" style="visibility: hidden;" id="Сalculator">
+
+        <input id="num1" />
+
+        <!-- блок с кнопками -->
+        <div id="operator_btns">
+            <button id="plus" onclick="op='+'">+</button>
+            <button id="minus" onclick="op='-'">-</button>
+            <button id="times" onclick="op='*'">x</button>
+            <button id="divide" onclick="op='/'">:</button>
+        </div>
+    
+        <!-- поле ввода второго числа -->
+        <input id="num2" />
+        <br>
+    
+        <!-- кнопка для рассчётов -->
+        <input type="button" value="Посчитать" onclick="executeСalculator()">
+        <p id="result"></p>
+
+    </div>
+    <div class="content" style="visibility: hidden;" id="Test">
+        <div class="quiz__head">
+            <div class="head__content" id="head">Тест</div>
+        </div>
+        <div class="quiz__body">
+            <div class="buttons">
+                <div class="buttons__content" id="buttons">
+                    <button class="button">Default button</button><br>
+                    <button class="button button_wrong">Wrong answer</button><br>
+                    <button class="button button_correct">Correct answer</button><br>
+                    <button class="button button_passive">Unclicked button</button><br>
+                </div>
+            </div>
+
+            <div class="quiz__footer">
+                <div class="footer__content" id="pages">0 / 0</div>
+            </div>
+        </div>
+    </div>
+        <script src="js/script.js"></script>
+    </main>
+    <div class="container" style="visibility: hidden;" id="Сalendar">
+        <img src="img/background.jpg" onclick="showСalendar()">
+        <div class="centered">
+            <div class="container">
+                <div class="t-c">
+                    <div class="calendar">
+                        <div class="current">
+                            <div class="month"></div>
+                            <div class="date"></div>
+                            <div class="year"></div>
+                    </div>
+                        <div class="datelist"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-left"><p id="top-left"></p></div>
+        <div class="top-right"><p id="top-right"></p></div>
+        </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
